@@ -1,0 +1,8 @@
+#!/bin/sh
+# Creates a list of packages currently installed (FreeBSD). --sjk
+
+OUTFILE="/root/.pkglist"
+PKGINFO="/usr/sbin/pkg_info"
+SORT="/usr/bin/sort"
+
+$PKGINFO -qoa | $SORT > $OUTFILE
